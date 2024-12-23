@@ -4,7 +4,7 @@ A secure cloud Linux computer powered by [E2B Desktop Sandbox](https://github.co
 
 https://github.com/user-attachments/assets/3837c4f6-45cb-43f2-9d51-a45f742424d4
 
-## Get started
+## Get Started
 
 ### Prerequisites
 
@@ -14,7 +14,9 @@ https://github.com/user-attachments/assets/3837c4f6-45cb-43f2-9d51-a45f742424d4
 - [OpenRouter API key](https://openrouter.ai/settings/keys)
 - [Fireworks API key](https://fireworks.ai/account/api-keys)
 
-### 1. Install the prerequisites
+### 1. Install the Prerequisites
+
+#### macOS
 
 In your terminal:
 
@@ -22,7 +24,33 @@ In your terminal:
 brew install poetry ffmpeg
 ```
 
-### 2. Clone the repository
+#### Windows
+
+1. Install [Chocolatey](https://chocolatey.org/install).
+2. Run the following command in PowerShell:
+
+```sh
+choco install poetry ffmpeg
+```
+
+Alternatively, use [Scoop](https://scoop.sh/):
+
+1. Install Scoop by following the instructions [here](https://scoop.sh/).
+2. Run the following command in PowerShell:
+
+```sh
+scoop install poetry ffmpeg
+```
+
+#### Linux
+
+Use your package manager to install the prerequisites. For example, on Ubuntu/Debian:
+
+```sh
+sudo apt update && sudo apt install poetry ffmpeg
+```
+
+### 2. Clone the Repository
 
 In your terminal:
 
@@ -30,11 +58,11 @@ In your terminal:
 git clone https://github.com/e2b-dev/secure-computer-use/
 ```
 
-### 3. Set the environment variables
+### 3. Set the Environment Variables
 
 Enter the project directory:
 
-```
+```sh
 cd secure-computer-use
 ```
 
@@ -47,15 +75,12 @@ OPENROUTER_API_KEY="your-openrouter-api-key"
 FIREWORKS_API_KEY="your-fireworks-api-key"
 ```
 
-### 4. Start the web interface
+### 4. Start the Web Interface
 
-Run the following command to start the agent:
+Run the following commands to start the agent:
 
 ```sh
 poetry install
-```
-
-```sh
 poetry run start
 ```
 
